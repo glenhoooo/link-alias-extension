@@ -1,0 +1,128 @@
+:root {
+  --bg: #0b0f17;
+  --card: #111827;
+  --muted: #94a3b8;
+  --text: #e5e7eb;
+  --border: #1f2937;
+  --btn: #1d4ed8;
+  --btn2: #0f172a;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.popup {
+  width: 420px;
+  padding: 12px;
+}
+
+.page {
+  padding: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.section { margin-top: 12px; }
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.between { justify-content: space-between; }
+
+.col { display: flex; flex-direction: column; gap: 4px; }
+
+.input, .textarea {
+  width: 100%;
+  background: #0b1220;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 10px;
+  outline: none;
+}
+
+.textarea { min-height: 100px; resize: vertical; }
+
+.btn {
+  background: var(--btn);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.btn.small { padding: 7px 10px; border-radius: 10px; font-size: 12px; }
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 14px 0;
+}
+
+.list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+}
+
+.itemTitle { font-weight: 800; }
+
+.pre {
+  background: #0b1220;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  overflow: auto;
+  max-height: 280px;
+}
+
+.hidden { display: none; }
+code {
+  background: rgba(148,163,184,0.12);
+  border: 1px solid rgba(148,163,184,0.16);
+  padding: 1px 6px;
+  border-radius: 8px;
+}

@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Link Alias",
+  "version": "0.1.0",
+  "description": "Local-first alias (go links) with omnibox @ and search-engine interception.",
+  "action": {
+    "default_title": "Aliases",
+    "default_popup": "pages/popup/index.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-48.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-48.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "options_page": "pages/options/index.html",
+  "background": {
+    "service_worker": "assets/sw.js",
+    "type": "module"
+  },
+  "omnibox": { "keyword": "@" },
+  "permissions": [
+    "storage",
+    "tabs",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "*://www.google.com/*",
+    "*://www.bing.com/*",
+    "*://duckduckgo.com/*"
+  ]
+}
