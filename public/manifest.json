@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Link Alias",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local-first alias (go links) with omnibox @ and search-engine interception.",
   "action": {
     "default_title": "Aliases",
