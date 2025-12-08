@@ -2,7 +2,8 @@ import { getStore, upsertAlias, deleteAlias, Store } from "../lib/storage";
 import { parseAliasInput, resolveTargets } from "../lib/alias";
 
 const LAST_SEARCH_BY_TAB = "linkas_last_search_by_tab_v1" as const;
-const DNR_RULE_ID = 1001;
+// 定义一组规则 ID，预留足够的空间
+const RULE_IDS = [1001, 1002, 1003, 1004];
 
 type Msg =
   | { type: "get-last-search-url"; tabId: number }
@@ -39,23 +40,65 @@ async function ensureDefaultData() {
 }
 
 async function installDnrRules() {
-  const rule: chrome.declarativeNetRequest.Rule = {
-    id: DNR_RULE_ID,
-    priority: 1,
-    action: {
-      type: "redirect",
-      redirect: { extensionPath: "/pages/resolve/index.html" },
+  const rules: chrome.declarativeNetRequest.Rule[] = [
+    {
+      // Rule 1: Google
+      id: 1001,
+      priority: 1,
+      action: {
+        type: "redirect",
+        redirect: { extensionPath: "/pages/resolve/index.html" },
+      },
+      condition: {
+        resourceTypes: ["main_frame"],
+        // 简化正则：移除不必要的捕获组，使用 [?&] 匹配参数连接符
+        regexFilter: "^https?://(www\\.)?google\\.com/search\\?.*[?&]q=.*",
+      },
     },
-    condition: {
-      resourceTypes: ["main_frame"],
-      regexFilter:
-        "^(https?://(www\\.)?google\\.com/search\\?.*([&?])q=|https?://(www\\.)?bing\\.com/search\\?.*([&?])q=|https?://duckduckgo\\.com/\\?.*([&?])q=|https?://duckduckgo\\.com/\\?.*([&?])query=).*$",
+    {
+      // Rule 2: Bing
+      id: 1002,
+      priority: 1,
+      action: {
+        type: "redirect",
+        redirect: { extensionPath: "/pages/resolve/index.html" },
+      },
+      condition: {
+        resourceTypes: ["main_frame"],
+        regexFilter: "^https?://(www\\.)?bing\\.com/search\\?.*[?&]q=.*",
+      },
     },
-  };
+    {
+      // Rule 3: DuckDuckGo (参数为 q)
+      id: 1003,
+      priority: 1,
+      action: {
+        type: "redirect",
+        redirect: { extensionPath: "/pages/resolve/index.html" },
+      },
+      condition: {
+        resourceTypes: ["main_frame"],
+        regexFilter: "^https?://duckduckgo\\.com/\\?.*[?&]q=.*",
+      },
+    },
+    {
+      // Rule 4: DuckDuckGo (参数为 query)
+      id: 1004,
+      priority: 1,
+      action: {
+        type: "redirect",
+        redirect: { extensionPath: "/pages/resolve/index.html" },
+      },
+      condition: {
+        resourceTypes: ["main_frame"],
+        regexFilter: "^https?://duckduckgo\\.com/\\?.*[?&]query=.*",
+      },
+    },
+  ];
 
   await chrome.declarativeNetRequest.updateDynamicRules({
-    removeRuleIds: [DNR_RULE_ID],
-    addRules: [rule],
+    removeRuleIds: RULE_IDS, // 清除旧规则
+    addRules: rules,
   });
 }
 

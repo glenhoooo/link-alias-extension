@@ -25,6 +25,7 @@ el.save.onclick = async () => {
     type: "upsert-alias",
     alias: { key, targets },
   });
+  el.key.value = "";
   await render();
 };
 
