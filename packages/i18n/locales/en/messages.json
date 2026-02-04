@@ -1,0 +1,86 @@
+{
+  "extensionDescription": {
+    "message": "Link Aliases - Manage your short links",
+    "description": "Extension description"
+  },
+  "popupTitle": {
+    "message": "Link Aliases",
+    "description": "Popup title"
+  },
+  "addCurrentPage": {
+    "message": "Add Current Page",
+    "description": "Button to add current page"
+  },
+  "openList": {
+    "message": "View Aliases",
+    "description": "Button or header for list"
+  },
+  "openOptions": {
+    "message": "Open Options",
+    "description": "Button to open options page"
+  },
+  "aliasAdded": {
+    "message": "Alias added!",
+    "description": "Success message"
+  },
+  "displayErrorInfo": {
+    "message": "Error Info",
+    "description": "Error info title"
+  },
+  "displayErrorDescription": {
+    "message": "An error has occurred",
+    "description": "Error description"
+  },
+  "displayErrorReset": {
+    "message": "Reset",
+    "description": "Reset button text"
+  },
+  "displayErrorDetailsInfo": {
+    "message": "Error Details",
+    "description": "Error details title"
+  },
+  "displayErrorUnknownErrorInfo": {
+    "message": "Unknown Error",
+    "description": "Unknown error message"
+  },
+  "extensionName": {
+    "message": "Link Aliases",
+    "description": "Extension name"
+  },
+  "optionsTitle": {
+    "message": "Alias Management",
+    "description": "Title for the options page"
+  },
+  "addAlias": {
+    "message": "Add",
+    "description": "Button to add alias"
+  },
+  "aliasPlaceholder": {
+    "message": "Alias (e.g. g)",
+    "description": "Placeholder for alias input"
+  },
+  "urlPlaceholder": {
+    "message": "Target URL (e.g. https://google.com)",
+    "description": "Placeholder for url input"
+  },
+  "delete": {
+    "message": "Delete",
+    "description": "Delete button text"
+  },
+  "save": {
+    "message": "Save",
+    "description": "Save button text"
+  },
+  "cancel": {
+    "message": "Cancel",
+    "description": "Cancel button text"
+  },
+  "noAliases": {
+    "message": "No aliases yet",
+    "description": "Message shown when no aliases exist"
+  },
+  "toggleTheme": {
+    "message": "Toggle Theme",
+    "description": "Toggle theme button text"
+  }
+}

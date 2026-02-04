@@ -1,0 +1,86 @@
+{
+  "extensionDescription": {
+    "message": "Link Aliases - 管理你的短链接",
+    "description": "Extension description"
+  },
+  "popupTitle": {
+    "message": "别名助手",
+    "description": "Popup title"
+  },
+  "addCurrentPage": {
+    "message": "添加当前页面",
+    "description": "Button to add current page"
+  },
+  "openList": {
+    "message": "别名列表",
+    "description": "Button or header for list"
+  },
+  "openOptions": {
+    "message": "打开设置",
+    "description": "Button to open options page"
+  },
+  "aliasAdded": {
+    "message": "添加成功！",
+    "description": "Success message"
+  },
+  "displayErrorInfo": {
+    "message": "错误信息",
+    "description": "Error info title"
+  },
+  "displayErrorDescription": {
+    "message": "发生了错误",
+    "description": "Error description"
+  },
+  "displayErrorReset": {
+    "message": "重置",
+    "description": "Reset button text"
+  },
+  "displayErrorDetailsInfo": {
+    "message": "错误详情",
+    "description": "Error details title"
+  },
+  "displayErrorUnknownErrorInfo": {
+    "message": "未知错误",
+    "description": "Unknown error message"
+  },
+  "extensionName": {
+    "message": "Link Aliases",
+    "description": "Extension name"
+  },
+  "optionsTitle": {
+    "message": "别名管理",
+    "description": "Title for the options page"
+  },
+  "addAlias": {
+    "message": "添加",
+    "description": "Button to add alias"
+  },
+  "aliasPlaceholder": {
+    "message": "别名 (例如: g)",
+    "description": "Placeholder for alias input"
+  },
+  "urlPlaceholder": {
+    "message": "目标 URL (例如: https://google.com)",
+    "description": "Placeholder for url input"
+  },
+  "delete": {
+    "message": "删除",
+    "description": "Delete button text"
+  },
+  "save": {
+    "message": "保存",
+    "description": "Save button text"
+  },
+  "cancel": {
+    "message": "取消",
+    "description": "Cancel button text"
+  },
+  "noAliases": {
+    "message": "暂无别名",
+    "description": "Message shown when no aliases exist"
+  },
+  "toggleTheme": {
+    "message": "切换主题",
+    "description": "Toggle theme button text"
+  }
+}
